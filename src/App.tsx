@@ -1,5 +1,7 @@
+import { Header } from "./components/header/Header";
+
 export const App = () => {
   return (
-    <h1>hola</h1>
+    <Header />
   );
 };
