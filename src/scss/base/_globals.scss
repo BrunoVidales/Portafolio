@@ -1,7 +1,9 @@
 @use 'variables' as v;
+@use 'mixins' as m;
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 
@@ -17,6 +19,10 @@ body {
     color: v.$primary;
     font-family: v.$mainFont;
     font-size: 1.6rem;
+}
+
+body, html {
+    overflow-x: hidden;
 }
 
 [class$="container"] {
@@ -40,4 +46,9 @@ img {
 
 ul {
     list-style: none;
+}
+
+button {
+    all: unset;
+    cursor: pointer; 
 }
