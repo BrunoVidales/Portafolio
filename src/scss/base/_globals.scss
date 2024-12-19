@@ -33,10 +33,13 @@ body, html {
     @media(min-width: 1600px) {
         max-width: 140rem;
     }
+    @include m.tv { 
+        max-width: 200rem;
+    }
 }
 
-[class*="section"] {
-    padding: 5rem 0;
+[class*="spacing"] {
+    padding: 8rem 0;
 }
 
 img {

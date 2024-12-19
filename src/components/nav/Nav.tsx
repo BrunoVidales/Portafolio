@@ -31,8 +31,8 @@ export const Nav = () => {
   };
 
   return (
-    <nav  className="nav section container">
-      <a href="#">
+    <nav  className="nav container">
+      <a className="nav__bruno" href="#">
         <img src="/logo/nav_logo.png" alt="Bruno Vidales" />
       </a>
       {isMobile && (

@@ -14,7 +14,7 @@ export const Main = () => {
     }, []);
 
   return (
-    <main className="main section container">
+    <main className="main spacing container">
       <section id="about-me" className="about-me">
         <div data-aos="fade-right" className="about-me__content">
             <h2 className="about-me__title"><span>S</span>obre mí</h2>

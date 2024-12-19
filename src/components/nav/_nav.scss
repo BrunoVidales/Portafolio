@@ -2,20 +2,25 @@
 @use '../../scss/base/mixins' as m;
 
 .nav {
-    margin-bottom: 10rem;
-    height: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    @include m.tablet-2 { 
-        justify-content: unset;
-        gap: 5rem;
+    
+
+    &__bruno {
+        @include m.tablet-2 { 
+            margin-right: 1rem;
+        }
+        @include m.tv { 
+            margin-right: 2.5rem;
+        }
     }
 
     &__flex {
         z-index: 1;
-        padding: 3rem;
-        height: 70dvh;
+        padding: 5rem 1.5rem;
+        height: 50dvh;
+        width: 85%;
         background-color: #0a0a0a;
         position: absolute;
         right: 0;
@@ -23,9 +28,6 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        
-     
-        
         @include m.tablet-2 { 
             position: relative;
             right: 0;
@@ -42,7 +44,7 @@
     &__menu-close {
         position: absolute;
         right: 5%;
-        top: 5%;
+        top: 2.5%;
         z-index: 10;
     }
 
@@ -53,7 +55,11 @@
 
         @include m.tablet-2 { 
             flex-direction: row;
-            gap: 1.5rem;
+            gap: 1.2rem;
+        }
+        @include m.tv { 
+            gap: 2rem;
+            font-size: 2.5rem;
         }
         a {
             transition: .3s;
@@ -68,10 +74,19 @@
 
     &__networks {
         display: flex;
-        gap: 1.5rem;
-     
+        justify-content: space-evenly;
+        font-size: 1.2rem;
+        @include m.mobile-1 { 
+            font-size: 1.6rem;
+        }
+        @include m.tablet-1 { 
+            gap: 1.5rem;
+        }
+        @include m.tv { 
+            gap: 2.5rem;
+            font-size: 2rem;
+        }
         a { 
-            font-size: 1.5rem;
             padding: .5rem;
             display: flex;
             align-items: center;
@@ -79,17 +94,19 @@
             border-radius: .5rem;
             transition: .3s;
             @include m.tablet-2 { 
-                font-size: 1.6rem;
                 gap: 1.5rem;
             }
             
             img {
-                width: 2rem;
-                height: 2rem;
-
-                @include m.tablet-2 { 
+                width: 1.5rem;
+                height: 1.5rem;
+                @include m.mobile-1 { 
                     width: 2.5rem;
                     height: 2.5rem;
+                }
+                @include m.tv { 
+                    width: 3rem;
+                    height: 3rem;
                 }
             }
         }

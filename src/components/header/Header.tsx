@@ -14,15 +14,15 @@ export const Header = () => {
   }, []);
 
   return (
-    <header className="header">
+    <header className="header spacing">
       <Nav />
       <div className="header__content container">
         <div  className="header__logo"></div>
-        <div data-aos="flip-right" data-aos-duration="1500" className="header__text">
+        <div data-aos="flip-right" data-aos-duration="2500" className="header__texts">
           <p className="header__greeting">¡Hola!👋</p>
           <h1 className="header__heading">Soy <span>Bruno Vidales</span></h1>
           <p className="header__description">Me especializo en desarrollo web enfocado al Front End.</p>
-          <a className="header__link" href="#">Conctáctame</a>
+          <a className="header__button" href="#">Conctáctame</a>
         </div>
        </div>
     </header>

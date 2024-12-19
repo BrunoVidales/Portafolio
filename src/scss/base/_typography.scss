@@ -22,12 +22,19 @@ h2 {
     @include m.tablet_1 { 
         font-size: 4rem;
     }
+
+    @include m.tv { 
+        font-size: 5rem;
+    }
 }
 
 p {
     font-weight: 400;
     span {
         font-weight: 700;
+    }
+    @include m.tv { 
+        font-size: 2.5rem;
     }
 }
 
