@@ -13,10 +13,19 @@ h1 {
 }
 
 h2 {
-    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-size: 3rem;
     font-weight: 500;
     span {
         color: v.$secondary;
+    }
+
+    @include m.tablet_1 { 
+        font-size: 4rem;
+    }
+
+    @include m.tv { 
+        font-size: 5rem;
     }
 }
 
@@ -25,8 +34,12 @@ p {
     span {
         font-weight: 700;
     }
+    @include m.tv { 
+        font-size: 2.5rem;
+    }
 }
 
 a {
     text-decoration: none;
+    color: v.$primary;
 }

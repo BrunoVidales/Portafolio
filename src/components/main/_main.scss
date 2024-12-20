@@ -1,0 +1,54 @@
+@use '../../scss/base/variables' as v;
+@use '../../scss/base/mixins' as m;
+
+.about-me {
+    @include m.grid(1, 5rem);
+    align-items: center;
+    @include m.tablet_1 { 
+        @include m.grid(2, 5rem);
+    }
+
+
+    &__texts {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 1.5rem;
+    }
+}
+
+.skills {
+
+    &__flex {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__skill {
+        cursor: default;
+        padding: 1rem 0;
+        border-radius: .5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        transition: .3s;
+        &:hover {
+            background-color: v.$secondary;
+            filter: blur(1px);
+        }
+
+        @include m.tv { 
+            width: 12rem;
+        }
+    }
+
+    &__name {
+        font-size: 1rem;
+        @include m.tv { 
+            font-size: 1.5rem;
+        }
+    }
+}

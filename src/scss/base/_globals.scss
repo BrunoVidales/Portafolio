@@ -1,7 +1,9 @@
 @use 'variables' as v;
+@use 'mixins' as m;
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 
@@ -19,6 +21,10 @@ body {
     font-size: 1.6rem;
 }
 
+body, html {
+    overflow-x: hidden;
+}
+
 [class$="container"] {
     max-width: 130rem;
     width: 95%;
@@ -27,10 +33,13 @@ body {
     @media(min-width: 1600px) {
         max-width: 140rem;
     }
+    @include m.tv { 
+        max-width: 200rem;
+    }
 }
 
-[class*="section"] {
-    padding: 5rem 0;
+[class*="spacing"] {
+    padding: 8rem 0;
 }
 
 img {
@@ -40,4 +49,9 @@ img {
 
 ul {
     list-style: none;
+}
+
+button {
+    all: unset;
+    cursor: pointer; 
 }

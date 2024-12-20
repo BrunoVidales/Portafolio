@@ -20,7 +20,10 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+
+    /* Agregar esta línea */
+    "resolveJsonModule": true  // Habilitar la importación de archivos JSON
   },
   "include": ["src"]
 }
