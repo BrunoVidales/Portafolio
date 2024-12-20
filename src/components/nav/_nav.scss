@@ -9,7 +9,7 @@
 
     &__bruno {
         @include m.tablet-2 { 
-            margin-right: 1rem;
+            margin-right: 1.5rem;
         }
         @include m.tv { 
             margin-right: 2.5rem;
@@ -74,14 +74,9 @@
 
     &__networks {
         display: flex;
-        justify-content: space-evenly;
-        font-size: 1.2rem;
-        @include m.mobile-1 { 
-            font-size: 1.6rem;
-        }
-        @include m.tablet-1 { 
-            gap: 1.5rem;
-        }
+        gap: 1.5rem;
+        font-size: 1.6rem;
+       
         @include m.tv { 
             gap: 2.5rem;
             font-size: 2rem;
@@ -99,7 +94,7 @@
             
             img {
                 width: 1.5rem;
-                height: 1.5rem;
+                height: 2rem;
                 @include m.mobile-1 { 
                     width: 2.5rem;
                     height: 2.5rem;
@@ -112,6 +107,7 @@
         }
         a:hover {
             background-color: v.$secondary;
+            filter: blur(1px);
         }
     }
 }

@@ -53,10 +53,10 @@ export const Nav = () => {
           </button>
           <div className="nav__sections">
             <a onClick={handleClick} href="#about-me">Sobre Mí</a>
-            <a onClick={handleClick} href="#">Skills</a>
-            <a onClick={handleClick} href="#">Hobbies</a>
-            <a onClick={handleClick} href="#">Formación</a>
-            <a onClick={handleClick} href="#">Proyectos</a>
+            <a onClick={handleClick} href="#skills">Skills</a>
+            <a onClick={handleClick} href="#hobbies">Hobbies</a>
+            <a onClick={handleClick} href="#formacion">Formación</a>
+            <a onClick={handleClick} href="#proyectos">Proyectos</a>
           </div>
           <Networks />
         </div>
@@ -66,10 +66,10 @@ export const Nav = () => {
         <div className="nav__flex">
           <div className="nav__sections">
             <a href="#about-me">Sobre Mí</a>
-            <a href="#">Skills</a>
-            <a href="#">Hobbies</a>
-            <a href="#">Formación</a>
-            <a href="#">Proyectos</a>
+            <a href="#skills">Skills</a>
+            <a href="#hobbies">Hobbies</a>
+            <a href="#formacion">Formación</a>
+            <a href="#proyectos">Proyectos</a>
           </div>
           <Networks />
         </div>
