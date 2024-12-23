@@ -8,6 +8,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Networks from '../nav/Networks';
 import { skills } from '../../data/db';
+import { hobbies } from '../../data/db';
 
 export const Main = () => {
 
@@ -22,7 +23,7 @@ export const Main = () => {
   return (
     <main className="main spacing container">
       <section id="about-me" className="about-me spacing">
-        <div data-aos="fade-right" className="about-me__content">
+        <div data-aos="fade-right" data-aos-duration="1500" className="about-me__content">
             <h2 className="about-me__title"><span>S</span>obre mí</h2>
             <div className="about-me__texts">
               <p className="about-me__paragraph">Soy <span>Bruno Vidales</span>, un  desarrollador web apasionado por aprender nuevas tecnologías y   herramientas.</p>
@@ -31,23 +32,26 @@ export const Main = () => {
               <Networks />
             </div>
         </div>
-        <div data-aos="fade-left" className="about-me__dev">
+        <div data-aos="fade-left" data-aos-duration="1500" className="about-me__dev">
           <img src="/svg/decoration/dev.svg" alt="Imagen desorrallador" />
         </div>
       </section>
 
-      <section id="skills" data-aos="fade-right" className="skills spacing">
+      <section id="skills" data-aos="fade-right" data-aos-duration="1500" className="skills spacing">
         <h2><span>S</span>kills</h2>
         <Swiper
           modules={[Autoplay]}
-          spaceBetween={0}
-          slidesPerView={6}
+          breakpoints={{
+            320: { slidesPerView: 3 }, // Pantallas pequeñas
+            480: { slidesPerView: 6 }, // Teléfonos
+          }}
           loop={true}
           autoplay={{
             delay: 2000, // Cambia este valor según tu preferencia
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
           }}
+          
         >
           {
             skills.map(skill => (
@@ -60,6 +64,35 @@ export const Main = () => {
             ))
           }
         </Swiper>
+      </section>
+           
+      <section id="hobbies" data-aos="fade-right" data-aos-duration="1500" className="hobbies spacing">
+          <h2><span>H</span>obbies</h2>
+          <Swiper
+            modules={[Autoplay]}
+            breakpoints={{
+              320: { slidesPerView: 1, spaceBetween: 10 }, 
+              480: { slidesPerView: 2, spaceBetween: 20  }, 
+            }}
+            loop={true}
+            autoplay={{
+              delay: 2000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
+          >
+            {
+              hobbies.map(hobbie => (
+                <SwiperSlide key={hobbie.id} className="hobbies__card">
+                  <img className="hobbies__img" src={hobbie.img} alt={`Imagen ${hobbie.name}`} />
+                  <div className="hobbies__content">
+                    <p className="hobbies__name">{hobbie.name}</p>
+                    <p className="hobbies__description">{hobbie.description}</p>
+                  </div>  
+                </SwiperSlide>
+              ))
+            }
+          </Swiper>
       </section>
     </main>
   );

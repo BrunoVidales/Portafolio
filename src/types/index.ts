@@ -3,3 +3,7 @@ export type SkillsProps = {
     img: string,
     id: number
 };
+
+export type HobbiesProps = SkillsProps & {
+    description: string,
+};

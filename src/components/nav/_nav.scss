@@ -18,7 +18,7 @@
 
     &__flex {
         z-index: 1;
-        padding: 5rem 1.5rem;
+        padding: 4rem 1.5rem;
         height: 50dvh;
         width: 85%;
         background-color: #0a0a0a;
@@ -74,9 +74,13 @@
 
     &__networks {
         display: flex;
-        gap: 1.5rem;
-        font-size: 1.6rem;
-       
+        align-items: center;
+        gap: .5rem;
+        font-size: 1.2rem;
+        @include m.mobile-1 { 
+            font-size: 1.6rem;
+            gap: 1.5rem;
+        }
         @include m.tv { 
             gap: 2.5rem;
             font-size: 2rem;

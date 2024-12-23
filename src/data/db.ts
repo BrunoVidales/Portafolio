@@ -1,4 +1,5 @@
 import { SkillsProps } from "../types";
+import { HobbiesProps } from "../types";
 
 export const skills: SkillsProps[] = [
     { 
@@ -62,3 +63,30 @@ export const skills: SkillsProps[] = [
         id: 12 
     }
 ];  
+
+export const hobbies: HobbiesProps[] = [
+    { 
+        name: 'Cocinar', 
+        img: '/src/assets/hobbies/cocinar.svg',
+        description: 'Me gusta inventar en la cocina, por más que no me salga rico 😋',
+        id: 1 
+    },
+    { 
+        name: 'Juegos', 
+        img: '/src/assets/hobbies/juegos.svg',
+        description: 'Soy muy vicio, y amante de quedarme hasta las 5 de la madrugada 🥱',
+        id: 2 
+    },
+    { 
+        name: 'Películas', 
+        img: '/src/assets/hobbies/peliculas.svg',
+        description: 'Disfruto de ver películas, mis favoritas son las de terror 🎬',
+        id: 3
+    },
+    { 
+        name: 'Caminar', 
+        img: '/src/assets/hobbies/caminar.svg',
+        description: 'Me gusta caminar y relajarme caminando al aire libre 🚶‍♂️',
+        id: 4
+    }
+]

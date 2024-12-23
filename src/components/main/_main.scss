@@ -27,8 +27,6 @@
 
     &__skill {
         cursor: default;
-        padding: 1rem 0;
-        border-radius: .5rem;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -36,7 +34,6 @@
         gap: 1rem;
         transition: .3s;
         &:hover {
-            background-color: v.$secondary;
             filter: blur(1px);
         }
 
@@ -50,5 +47,70 @@
         @include m.tv { 
             font-size: 1.5rem;
         }
+    }
+}
+
+.hobbies {
+
+    &__flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 30rem;
+        height: 18rem;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        background: linear-gradient(135deg, v.$secondary, #ff6b6b);
+        border-radius: .5rem;
+        overflow: hidden;
+        padding: 2rem .5rem;
+    }
+
+    &__content {
+        text-align: center;
+        margin-top: 1rem;
+        transform: translateY(300%);
+        transition: transform .5s ease;
+    }
+
+    &__img {
+        width: 10rem;
+        transition: transform .5s ease;
+        position: absolute;
+
+        @include m.tablet-1 { 
+            width: 15rem;
+        }
+    }
+
+    &__name {
+        font-size: 1.5rem;
+        font-weight: 900;
+        margin-top: 1.5rem;
+        @include m.tablet-1 { 
+            font-size: 2.5rem;
+        }
+    }
+
+    &__description {
+        font-size: 1.3rem;
+        font-weight: 600;
+        @include m.tablet-1 { 
+            font-size: 1.6rem;
+        }
+    }
+
+    &__card:hover &__content {
+        transform: translateY(0%);
+    }
+
+    &__card:hover &__img {
+        transform: translateY(-150%);
     }
 }
