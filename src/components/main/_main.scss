@@ -114,3 +114,36 @@
         transform: translateY(-150%);
     }
 }
+
+
+.trainings {
+
+    &__training {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        transition: filter .3s;
+        &:hover {
+            filter: blur(1px);
+        }
+    }
+
+    &__img {
+        padding: .5rem;
+        border-radius: .5rem;
+        overflow: hidden;
+        background-color: white;
+        height: 30rem;
+        display: grid;
+        place-items: center;
+       
+    }
+
+    &__name,
+    &__description {
+        font-size: 1.2rem;
+        @include m.tablet-1 { 
+            font-size: 1.6rem;
+        }
+    }
+}

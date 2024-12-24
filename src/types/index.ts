@@ -7,3 +7,5 @@ export type SkillsProps = {
 export type HobbiesProps = SkillsProps & {
     description: string,
 };
+
+export type TrainingProps = HobbiesProps;
