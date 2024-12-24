@@ -1,10 +1,12 @@
 import { SkillsProps } from "../types";
+import { HobbiesProps } from "../types";
+import { TrainingProps } from "../types";
 
 export const skills: SkillsProps[] = [
     { 
         name: 'HTML', 
         img: '/src/assets/skills/html5.svg',
-        id: 1 
+        id: 1,
     },
     { 
         name: 'CSS', 
@@ -62,3 +64,51 @@ export const skills: SkillsProps[] = [
         id: 12 
     }
 ];  
+
+export const hobbies: HobbiesProps[] = [
+    { 
+        name: 'Cocinar', 
+        img: '/src/assets/hobbies/cocinar.svg',
+        description: 'Me gusta inventar en la cocina, por más que no me salga rico 😋',
+        id: 1 
+    },
+    { 
+        name: 'Juegos', 
+        img: '/src/assets/hobbies/juegos.svg',
+        description: 'Soy muy vicio, y amante de quedarme hasta las 5 de la madrugada 🥱',
+        id: 2 
+    },
+    { 
+        name: 'Películas', 
+        img: '/src/assets/hobbies/peliculas.svg',
+        description: 'Disfruto de ver películas, mis favoritas son las de terror 🎬',
+        id: 3
+    },
+    { 
+        name: 'Caminar', 
+        img: '/src/assets/hobbies/caminar.svg',
+        description: 'Me gusta caminar y relajarme caminando al aire libre 🚶‍♂️',
+        id: 4
+    }
+]; 
+
+export const training: TrainingProps[] = [
+    { 
+        name: 'Desarrollo Front End React', 
+        img: '/src/assets/training/educacionit.jpeg',
+        description: '2023 - Telecom Argentina y EducaciónIT',
+        id: 1 
+    },
+    { 
+        name: 'Especialización Front-End', 
+        img: '/src/assets/training/alura.jpg',
+        description: 'En curso - Alura',
+        id: 2 
+    },
+    { 
+        name: 'React y TypeScript', 
+        img: '/src/assets/training/udemy.jpg',
+        description: 'En curso - Udemy',
+        id: 3
+    }
+];
