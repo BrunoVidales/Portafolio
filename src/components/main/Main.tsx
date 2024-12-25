@@ -10,6 +10,7 @@ import Networks from '../nav/Networks';
 import { skills } from '../../data/db';
 import { hobbies } from '../../data/db';
 import { training } from '../../data/db';
+import { projects } from '../../data/db';
 
 export const Main = () => {
 
@@ -136,6 +137,51 @@ export const Main = () => {
               ))
             }
           </Swiper>
+      </section>
+
+      <section id="proyectos" data-aos="fade-left" data-aos-duration="2500" className="projects spacing">
+        <h2><span>P</span>royectos</h2>
+        <Swiper className="projects__swiper"
+          modules={[Autoplay]}
+          breakpoints={{
+            320: { 
+              slidesPerView: 1, 
+              spaceBetween: 10 
+            }, 
+            480: { 
+              slidesPerView: 1, 
+              spaceBetween: 15  
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 20
+            }
+          }}
+          loop={true}
+          autoplay={{
+            delay: 2000, // Cambia este valor según tu preferencia
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }}
+        >
+          {
+            projects.map(project => (
+              <SwiperSlide key={project.id} className="projects__project">
+                <a className="projects__img" href={project.url} target="_blank">
+                  <img src={project.img} alt={`image ${project.name}`} />
+                </a>
+                <h3 className="projects__name">{project.name}</h3>
+                <div className="projects__tools">
+                  {
+                    project.tools.map((tool, index) => (
+                      <img key={index} src={tool.ico} alt={`icono ${tool.tool}`} />
+                    ))
+                  }
+                </div>
+              </SwiperSlide>
+            ))
+          }
+        </Swiper>
       </section>
     </main>
   );

@@ -147,3 +147,38 @@
         }
     }
 }
+
+.projects {
+
+    &__project {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        height: 100%;
+        transition: .3s;
+        &:hover {
+            filter: blur(1px);
+        }
+    }
+
+    &__img img {
+        border-radius: .5rem;
+        object-fit: contain;
+        height: 20rem;
+    }
+
+    &__name {
+        margin: .5rem 0 .5rem 0;
+    }
+
+    &__tools {
+        display: flex;
+        gap: .5rem;
+        width: 2rem;
+        height: auto;
+        @include m.tablet-1 { 
+            width: 2.5rem;
+        }
+    }
+}

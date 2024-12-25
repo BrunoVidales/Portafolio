@@ -22,7 +22,7 @@ export const Header = () => {
           <p className="header__greeting">¡Hola!👋</p>
           <h1 className="header__heading">Soy <span>Bruno Vidales</span></h1>
           <p className="header__description">Me especializo en desarrollo web enfocado al Front End.</p>
-          <a className="header__button" href="#">Conctáctame</a>
+          <a className="header__button" href="#contacto">Conctáctame</a>
         </div>
        </div>
     </header>

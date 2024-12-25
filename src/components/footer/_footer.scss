@@ -1,0 +1,28 @@
+@use '../../scss/base/variables' as v;
+@use '../../scss/base/mixins' as m;
+
+
+.footer {
+    padding-bottom: 5rem;
+
+    &__contact {
+        margin-top: 1rem;
+        a {
+            display: flex;
+            gap: .5rem;
+
+            img {
+                width: 1.5rem;
+                height: auto;
+            }
+        }
+    }
+
+    &__copyright {
+        margin-top: 2.5rem;
+        text-align: center;
+        span {
+            color: v.$secondary;
+        }
+    }
+}

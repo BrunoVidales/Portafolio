@@ -1,6 +1,7 @@
 import { SkillsProps } from "../types";
 import { HobbiesProps } from "../types";
 import { TrainingProps } from "../types";
+import { ProjectsProps } from "../types";
 
 export const skills: SkillsProps[] = [
     { 
@@ -87,7 +88,7 @@ export const hobbies: HobbiesProps[] = [
     { 
         name: 'Caminar', 
         img: '/src/assets/hobbies/caminar.svg',
-        description: 'Me gusta caminar y relajarme caminando al aire libre 🚶‍♂️',
+        description: 'Me gusta caminar 🚶‍♂️',
         id: 4
     }
 ]; 
@@ -111,4 +112,48 @@ export const training: TrainingProps[] = [
         description: 'En curso - Udemy',
         id: 3
     }
+];
+
+export const projects: ProjectsProps[] = [
+    { 
+        name: 'GuitarLA', 
+        img: '/src/assets/projects/guitarLa.png',
+        tools: [
+            {tool: 'React', ico: '/src/assets/skills/react.svg'},
+            {tool: 'JavaScript', ico: '/src/assets/skills/javascript.svg'},
+        ],
+        url: 'https://chic-douhua-42cca0.netlify.app',
+        id: 1 
+    },
+    { 
+        name: 'Encriptador de texto', 
+        img: '/src/assets/projects/encriptadorDeTexto.png',
+        tools: [
+            {tool: 'HTML', ico: '/src/assets/skills/html5.svg'},
+            {tool: 'CSS3', ico: '/src/assets/skills/css3.svg'},
+            {tool: 'JavaScript', ico: '/src/assets/skills/javascript.svg'},
+        ],
+        url: 'https://serene-faloodeh-af528e.netlify.app',
+        id: 2 
+    },
+    { 
+        name: 'GifExpert', 
+        img: '/src/assets/projects/gifexpert.png',
+        tools: [
+            {tool: 'React', ico: '/src/assets/skills/react.svg'},
+            {tool: 'TypeScript', ico: '/src/assets/skills/typescript.svg'},
+        ],
+        url: 'https://scintillating-kangaroo-f725ee.netlify.app',
+        id: 3 
+    },
+    { 
+        name: 'Consumo de Propinas', 
+        img: '/src/assets/projects/consumoDePropinas.png',
+        tools: [
+            {tool: 'React', ico: '/src/assets/skills/react.svg'},
+            {tool: 'TypeScript', ico: '/src/assets/skills/typescript.svg'},
+        ],
+        url: 'https://scintillating-lokum-0cd8ea.netlify.app',
+        id: 4 
+    },
 ];
